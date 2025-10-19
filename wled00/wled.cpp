@@ -65,6 +65,9 @@ void WLED::loop()
   handleSerial();
   #endif
   handleImprovWifiScan();
+
+  // Andys notes: this appears to be where pixels are updated, as well as configuration. 
+  // this may be the central function.
   handleNotifications();
   handleTransitions();
   #ifdef WLED_ENABLE_DMX
